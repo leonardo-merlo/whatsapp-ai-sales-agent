@@ -1,0 +1,5 @@
+{
+  "versao": "exemplo-2026-11-04.1",
+  "nota": "Families allowed to resolve on their own (a single matching product is accepted without asking the customer). Any family outside this list always confirms with the customer.",
+  "familias": ["vergalhao", "metalon", "barra_chata", "prego", "arame", "arame_farpado", "parafuso_auto_brocante", "telha_metalica", "calha", "disco", "tinta"]
+}

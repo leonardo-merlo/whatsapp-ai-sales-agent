@@ -376,7 +376,7 @@ describe('frase sobre a lista nunca vai para a IA livre (teste do Vendedor 1 de 
   const aberto = { ...itens, dados: { ...itens.dados, v2_pedido_id: 'p1' } };
   const FIXA = { tipo: 'fixa_e_lista', chave: 'lista_nao_entendi', pedidoId: 'p1' };
 
-  for (const frase of ['Arame', 'é só 5 kg', 'o perfil de 68 na chapa 1.8', 'perfil trançado']) {
+  for (const frase of ['Arame', 'é só 5 kg', 'o perfil de 68 na chapa 1.8', 'arame trançado']) {
     test(`responde com a frase fixa e a lista a "${frase}"`, () => {
       assert.deepEqual(passo(aberto, msg('m7', frase, { intencao: 'outro_assunto' }), 'm7').fala, FIXA);
     });

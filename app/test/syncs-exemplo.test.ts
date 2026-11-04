@@ -75,7 +75,7 @@ describe('formato do sync de produtos', () => {
 
   test('lê inteira a resposta real de 30/09', () => {
     const r = lerProdutosDoSync(amostra('produtos'));
-    assert.deepEqual(r.ok && [r.itens.length, r.idsIncompletos.length, r.falhasDoErp.length], [734, 0, 5]);
+    assert.deepEqual(r.ok && [r.itens.length, r.idsIncompletos.length, r.falhasDoErp.length], [38, 0, 2]);
   });
 
   test('na resposta real não sobra acento quebrado', () => {
@@ -118,7 +118,7 @@ describe('formato do sync de regiões', () => {
   test('lê inteira a resposta real de 30/09, sem acento quebrado', () => {
     const r = lerRegioesDoSync(amostra('regioes'));
     const quebradas = r.ok ? r.itens.flatMap(x => x.cidades).filter(c => ACENTO_QUEBRADO.test(c.cidade)) : null;
-    assert.deepEqual(r.ok && [r.itens.length, r.idsIncompletos.length, quebradas], [54, 0, []]);
+    assert.deepEqual(r.ok && [r.itens.length, r.idsIncompletos.length, quebradas], [3, 0, []]);
   });
 
   test('região sem cidades vira problema', () => {
@@ -430,7 +430,7 @@ describe('a rota do cron', () => {
 
 describe('medidas por molde no sync de produtos', () => {
   const EXEMPLO = 'e8e00000-0000-4000-8000-0000000000e1';
-  const METALON = 'TUBOS QUAD. E RETANG. CH. 18';
+  const METALON = 'TUBO METALON CH. 18';
   const comLista = (lista: ProdutoDoSync[]) => {
     erp = criarSimuladorExemplo({ chave: CHAVE, syncs: { produtos: lista, regioes: regioesDoErp, caminhos: CAMINHOS } });
   };

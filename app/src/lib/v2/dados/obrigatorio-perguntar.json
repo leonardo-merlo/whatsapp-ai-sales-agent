@@ -1,0 +1,7 @@
+{
+  "versao": "exemplo-2026-11-04.1",
+  "nota": "Fictional questions the demo company always asks before picking a product.",
+  "linhas": [
+    {"id":"op_telha_perfil","familia":"telha_metalica","condicao":{"atributo_nao_informado":"perfil"},"atributo":"perfil","pergunta":"A telha é trapezoidal ou ondulada?","opcoes":[{"rotulo":"trapezoidal","filtro":{"atributos":{"perfil":"trapezoidal"}}},{"rotulo":"ondulada","filtro":{"atributos":{"perfil":"ondulada"}}}],"status":"ativa","a_validar_vendedor":false,"origem":"exemplo","data":"2026-11-04","texto_original":"telha sem dizer o perfil: pergunte se é trapezoidal ou ondulada","exemplo_positivo":"8 telhas 0,43 → pergunta o perfil","exemplo_negativo":"8 telhas ondulada 0,43 → 100703","negativo_criado_pela_v2":true,"positivo":{"familia":"telha_metalica","medidas":[["espessura","0,43"]],"espera":{"status":"ambiguo"}},"negativo":{"familia":"telha_metalica","medidas":[["espessura","0,43"]],"qualificadores":["ondulada"],"espera":{"codigo":"100703"}}}
+  ]
+}

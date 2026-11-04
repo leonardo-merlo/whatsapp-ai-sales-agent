@@ -48,8 +48,8 @@ before(() => {
   banco.organization_members = [{ id: MEMBRO, organization_id: ORG_A, nome: 'João', codigo_erp: 'V-07', telefone_whatsapp: '5573900000008', ativo: true, role: 'atendente' }];
   banco.organization_integrations = [{ id: 'integ-v2', organization_id: ORG_A, tipo: 'erp', endereco_base: BASE_DO_ERP, token_secret_id: 's', ativo: true, config: {} }];
   banco.catalogo_grupos = [
-    { id: 'g-ca50', organization_id: ORG_A, codigo: '4101', nome: 'VERGALHOES CA50', ativo: true },
-    { id: 'g-prego', organization_id: ORG_A, codigo: '4900', nome: 'PREGOS C CABECA', ativo: true },
+    { id: 'g-ca50', organization_id: ORG_A, codigo: '4101', nome: 'ACO CA50', ativo: true },
+    { id: 'g-prego', organization_id: ORG_A, codigo: '4900', nome: 'PREGOS', ativo: true },
   ];
   banco.catalogo_produtos = [
     { id: 'p-1', organization_id: ORG_A, grupo_id: 'g-ca50', codigo: '700005', descricao: 'VERGALHAO CA50 1/2 (12.5 MM)', unidade: 'VR', preco: 112.40, dados: {}, ativo: true, molde: 'vergalhão CA50', medidas: { bitola: '1/2', mm: '12.5' } },
