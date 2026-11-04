@@ -1,0 +1,403 @@
+{
+ "produtos": [
+  {
+   "produto_id": "100001",
+   "descricao": "VERGALHÃO CA50 1/4 (6.3 MM)",
+   "unidade_venda": "VR",
+   "peso_kg": 2.95,
+   "grupo": "ACO CA50",
+   "empresas": [
+    "EXEMPLO CENTRO",
+    "EXEMPLO NORTE"
+   ]
+  },
+  {
+   "produto_id": "100002",
+   "descricao": "VERGALHÃO CA50 5/16 (8.0 MM)",
+   "unidade_venda": "VR",
+   "peso_kg": 4.74,
+   "grupo": "ACO CA50",
+   "empresas": [
+    "EXEMPLO CENTRO"
+   ]
+  },
+  {
+   "produto_id": "100003",
+   "descricao": "VERGALHÃO CA50 3/8 (10.0 MM)",
+   "unidade_venda": "VR",
+   "peso_kg": 7.4,
+   "grupo": "ACO CA50",
+   "empresas": [
+    "EXEMPLO CENTRO"
+   ]
+  },
+  {
+   "produto_id": "100004",
+   "descricao": "VERGALHÃO CA50 1/2 (12.5 MM)",
+   "unidade_venda": "VR",
+   "peso_kg": 11.56,
+   "grupo": "ACO CA50",
+   "empresas": [
+    "EXEMPLO CENTRO",
+    "EXEMPLO NORTE"
+   ]
+  },
+  {
+   "produto_id": "100005",
+   "descricao": "VERGALHÃO CA50 5/8 (16.0 MM)",
+   "unidade_venda": "VR",
+   "peso_kg": 18.94,
+   "grupo": "ACO CA50",
+   "empresas": [
+    "EXEMPLO CENTRO"
+   ]
+  },
+  {
+   "produto_id": "100011",
+   "descricao": "VERGALHÃO CA60 4.2 MM",
+   "unidade_venda": "VR",
+   "peso_kg": 1.31,
+   "grupo": "ACO CA60",
+   "empresas": [
+    "EXEMPLO CENTRO"
+   ]
+  },
+  {
+   "produto_id": "100012",
+   "descricao": "VERGALHÃO CA60 5.0 MM",
+   "unidade_venda": "VR",
+   "peso_kg": 1.85,
+   "grupo": "ACO CA60",
+   "empresas": [
+    "EXEMPLO CENTRO",
+    "EXEMPLO NORTE"
+   ]
+  },
+  {
+   "produto_id": "100101",
+   "descricao": "TUBO METALON 20X20X18",
+   "unidade_venda": "PC",
+   "peso_kg": 6.6,
+   "grupo": "TUBO METALON CH. 18",
+   "empresas": [
+    "EXEMPLO CENTRO"
+   ]
+  },
+  {
+   "produto_id": "100102",
+   "descricao": "TUBO METALON 30X20X18",
+   "unidade_venda": "PC",
+   "peso_kg": 8.3,
+   "grupo": "TUBO METALON CH. 18",
+   "empresas": [
+    "EXEMPLO CENTRO"
+   ]
+  },
+  {
+   "produto_id": "100103",
+   "descricao": "TUBO METALON 30X30X18",
+   "unidade_venda": "PC",
+   "peso_kg": 10,
+   "grupo": "TUBO METALON CH. 18",
+   "empresas": [
+    "EXEMPLO CENTRO",
+    "EXEMPLO NORTE"
+   ]
+  },
+  {
+   "produto_id": "100104",
+   "descricao": "TUBO METALON 50X30X18",
+   "unidade_venda": "PC",
+   "peso_kg": 13.4,
+   "grupo": "TUBO METALON CH. 18",
+   "empresas": [
+    "EXEMPLO CENTRO"
+   ]
+  },
+  {
+   "produto_id": "100111",
+   "descricao": "TUBO METALON 20X20X20",
+   "unidade_venda": "PC",
+   "peso_kg": 5,
+   "grupo": "TUBO METALON CH. 20",
+   "empresas": [
+    "EXEMPLO CENTRO"
+   ]
+  },
+  {
+   "produto_id": "100112",
+   "descricao": "TUBO METALON 30X20X20",
+   "unidade_venda": "PC",
+   "peso_kg": 6.3,
+   "grupo": "TUBO METALON CH. 20",
+   "empresas": [
+    "EXEMPLO CENTRO",
+    "EXEMPLO NORTE"
+   ]
+  },
+  {
+   "produto_id": "100201",
+   "descricao": "BARRA CHATA 1 X 1/8",
+   "unidade_venda": "PC",
+   "peso_kg": 3.8,
+   "grupo": "BARRA CHATA",
+   "empresas": [
+    "EXEMPLO CENTRO"
+   ]
+  },
+  {
+   "produto_id": "100202",
+   "descricao": "BARRA CHATA 1.1/4 X 1/8",
+   "unidade_venda": "PC",
+   "peso_kg": 4.74,
+   "grupo": "BARRA CHATA",
+   "empresas": [
+    "EXEMPLO CENTRO"
+   ]
+  },
+  {
+   "produto_id": "100203",
+   "descricao": "BARRA CHATA 1.1/2 X 3/16",
+   "unidade_venda": "PC",
+   "peso_kg": 8.53,
+   "grupo": "BARRA CHATA",
+   "empresas": [
+    "EXEMPLO CENTRO",
+    "EXEMPLO NORTE"
+   ]
+  },
+  {
+   "produto_id": "100301",
+   "descricao": "PREGO 15X15 C/ CABECA",
+   "unidade_venda": "KG",
+   "peso_kg": 1,
+   "grupo": "PREGOS",
+   "empresas": [
+    "EXEMPLO CENTRO"
+   ]
+  },
+  {
+   "produto_id": "100302",
+   "descricao": "PREGO 17X21 C/ CABECA",
+   "unidade_venda": "KG",
+   "peso_kg": 1,
+   "grupo": "PREGOS",
+   "empresas": [
+    "EXEMPLO CENTRO"
+   ]
+  },
+  {
+   "produto_id": "100303",
+   "descricao": "PREGO 18X27 C/ CABECA",
+   "unidade_venda": "KG",
+   "peso_kg": 1,
+   "grupo": "PREGOS",
+   "empresas": [
+    "EXEMPLO CENTRO",
+    "EXEMPLO NORTE"
+   ]
+  },
+  {
+   "produto_id": "100304",
+   "descricao": "PREGO 17X21 GALVANIZADO",
+   "unidade_venda": "KG",
+   "peso_kg": 1,
+   "grupo": "PREGOS",
+   "empresas": [
+    "EXEMPLO CENTRO"
+   ]
+  },
+  {
+   "produto_id": "100401",
+   "descricao": "ARAME RECOZIDO 18 BWG",
+   "unidade_venda": "KG",
+   "peso_kg": 1,
+   "grupo": "ARAMES",
+   "empresas": [
+    "EXEMPLO CENTRO"
+   ]
+  },
+  {
+   "produto_id": "100402",
+   "descricao": "ARAME GALVANIZADO 14 BWG",
+   "unidade_venda": "KG",
+   "peso_kg": 1,
+   "grupo": "ARAMES",
+   "empresas": [
+    "EXEMPLO CENTRO",
+    "EXEMPLO NORTE"
+   ]
+  },
+  {
+   "produto_id": "100403",
+   "descricao": "ARAME GALVANIZADO 16 BWG",
+   "unidade_venda": "KG",
+   "peso_kg": 1,
+   "grupo": "ARAMES",
+   "empresas": [
+    "EXEMPLO CENTRO"
+   ]
+  },
+  {
+   "produto_id": "100501",
+   "descricao": "ARAME FARPADO TOURO 250M",
+   "unidade_venda": "RL",
+   "peso_kg": 1,
+   "grupo": "ARAMES FARPADOS",
+   "empresas": [
+    "EXEMPLO CENTRO"
+   ]
+  },
+  {
+   "produto_id": "100502",
+   "descricao": "ARAME FARPADO TOURO 500M",
+   "unidade_venda": "RL",
+   "peso_kg": 1,
+   "grupo": "ARAMES FARPADOS",
+   "empresas": [
+    "EXEMPLO CENTRO",
+    "EXEMPLO NORTE"
+   ]
+  },
+  {
+   "produto_id": "100503",
+   "descricao": "ARAME FARPADO CAMPEIRO 250M",
+   "unidade_venda": "RL",
+   "peso_kg": 1,
+   "grupo": "ARAMES FARPADOS",
+   "empresas": [
+    "EXEMPLO CENTRO"
+   ]
+  },
+  {
+   "produto_id": "100601",
+   "descricao": "PARAFUSO AUTO BROCANTE 1/4X3/4 (CX 100)",
+   "unidade_venda": "CX",
+   "peso_kg": 1,
+   "grupo": "PARAFUSOS AUTO BROCANTES",
+   "empresas": [
+    "EXEMPLO CENTRO"
+   ]
+  },
+  {
+   "produto_id": "100602",
+   "descricao": "PARAFUSO AUTO BROCANTE 1/4X1 (CX 100)",
+   "unidade_venda": "CX",
+   "peso_kg": 1,
+   "grupo": "PARAFUSOS AUTO BROCANTES",
+   "empresas": [
+    "EXEMPLO CENTRO",
+    "EXEMPLO NORTE"
+   ]
+  },
+  {
+   "produto_id": "100701",
+   "descricao": "TELHA GALVALUME TRAPEZOIDAL 0.43MM (6.0MT)",
+   "unidade_venda": "PC",
+   "peso_kg": 1,
+   "grupo": "TELHAS GALVALUME",
+   "empresas": [
+    "EXEMPLO CENTRO"
+   ]
+  },
+  {
+   "produto_id": "100702",
+   "descricao": "TELHA GALVALUME TRAPEZOIDAL 0.50MM (6.0MT)",
+   "unidade_venda": "PC",
+   "peso_kg": 1,
+   "grupo": "TELHAS GALVALUME",
+   "empresas": [
+    "EXEMPLO CENTRO"
+   ]
+  },
+  {
+   "produto_id": "100703",
+   "descricao": "TELHA GALVALUME ONDULADA 0.43MM (3.0MT)",
+   "unidade_venda": "PC",
+   "peso_kg": 1,
+   "grupo": "TELHAS GALVALUME",
+   "empresas": [
+    "EXEMPLO CENTRO",
+    "EXEMPLO NORTE"
+   ]
+  },
+  {
+   "produto_id": "100801",
+   "descricao": "CALHA GALVANIZADA 30CM (6MT)",
+   "unidade_venda": "PC",
+   "peso_kg": 1,
+   "grupo": "CALHAS",
+   "empresas": [
+    "EXEMPLO CENTRO"
+   ]
+  },
+  {
+   "produto_id": "100802",
+   "descricao": "CALHA GALVANIZADA 40CM (6MT)",
+   "unidade_venda": "PC",
+   "peso_kg": 1,
+   "grupo": "CALHAS",
+   "empresas": [
+    "EXEMPLO CENTRO"
+   ]
+  },
+  {
+   "produto_id": "100901",
+   "descricao": "DISCO DE CORTE 4.1/2 X 7/8 BRASA",
+   "unidade_venda": "PC",
+   "peso_kg": 1,
+   "grupo": "DISCOS",
+   "empresas": [
+    "EXEMPLO CENTRO",
+    "EXEMPLO NORTE"
+   ]
+  },
+  {
+   "produto_id": "100902",
+   "descricao": "DISCO DE DESBASTE 4.1/2 X 7/8 BRASA",
+   "unidade_venda": "PC",
+   "peso_kg": 1,
+   "grupo": "DISCOS",
+   "empresas": [
+    "EXEMPLO CENTRO"
+   ]
+  },
+  {
+   "produto_id": "100903",
+   "descricao": "DISCO DE CORTE 7 X 7/8 BRASA",
+   "unidade_venda": "PC",
+   "peso_kg": 1,
+   "grupo": "DISCOS",
+   "empresas": [
+    "EXEMPLO CENTRO"
+   ]
+  },
+  {
+   "produto_id": "101001",
+   "descricao": "TINTA ZARCÃO 3.6L",
+   "unidade_venda": "GL",
+   "peso_kg": 1,
+   "grupo": "TINTAS",
+   "empresas": [
+    "EXEMPLO CENTRO",
+    "EXEMPLO NORTE"
+   ]
+  },
+  {
+   "produto_id": "101002",
+   "descricao": "TINTA ESMALTE PRETO 3.6L",
+   "unidade_venda": "GL",
+   "peso_kg": 1,
+   "grupo": "TINTAS",
+   "empresas": [
+    "EXEMPLO CENTRO"
+   ]
+  }
+ ],
+ "sincronizado_em": "2026-09-30T15:43:30-03:00",
+ "filtro_atualizados_apos": "nao_suportado",
+ "falhas": [
+  "EXEMPLO NORTE: tempo esgotado",
+  "CORTE DOBRA CENTRO: tempo esgotado"
+ ]
+}

@@ -1,0 +1,8 @@
+{
+  "versao": "exemplo-2026-11-04.1",
+  "nota": "Fictional list of what the demo company does not sell.",
+  "linhas": [
+    {"id":"nv_fora_do_ramo","familia":"fora_do_ramo","status":"ativa","a_validar_vendedor":false,"origem":"exemplo","data":"2026-11-04","texto_original":"materiais que não são de ferro (areia, brita, tijolo, cimento, madeira): diga que não trabalhamos","exemplo_positivo":"2 m de areia","exemplo_negativo":"2 calha de 30","negativo_criado_pela_v2":true,"positivo":{"familia":"fora_do_ramo","texto":"2 m de areia"},"negativo":{"familia":"calha","texto":"2 calha de 30","medidas":[["largura","30"]]}},
+    {"id":"nv_vergalhao_acima_de_16","familia":"vergalhao","condicao":{"etiqueta":"bitola","maior_que":16},"status":"ativa","a_validar_vendedor":false,"origem":"exemplo","data":"2026-11-04","texto_original":"vergalhão acima de 16 mm a loja não trabalha","exemplo_positivo":"vergalhão de 20 mm","exemplo_negativo":"vergalhão 3/8","negativo_criado_pela_v2":true,"positivo":{"familia":"vergalhao","medidas":[["bitola","20"]],"espera":{"nao_regra":false}},"negativo":{"familia":"vergalhao","medidas":[["bitola","3/8"]],"espera":{"codigo":"100003"}}}
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "versao": "exemplo-2026-11-04.1",
+  "nota": "Fictional counter slang of Distribuidora Exemplo (demo). familias: words that point to a family; qualificadores: words that point to a product attribute; ignorar: words that do not tell products apart.",
+  "familias": [
+    {"id":"g_vergalhao","termo":"\\bvergalh(?:ao|oes)\\b|\\bvaras?\\b|\\bvergas?\\b|\\bferros?\\b(?! (?:chato|redondo)\\b)|\\bbarras?\\b(?! chatas?\\b)","familias":["vergalhao"],"origem":"exemplo","positivo":"50 varas de ferro 3/8","negativo":"4 barra chata 1 x 1/8"},
+    {"id":"g_metalon","termo":"\\bmetalons?\\b|\\btubos? quadrados?\\b|\\btubos? retangulares?\\b","familias":["metalon"],"origem":"exemplo","positivo":"10 metalon 30x20 chapa 18","negativo":"10 tubo redondo"},
+    {"id":"g_barra_chata","termo":"\\bbarras? chatas?\\b|\\bferros? chatos?\\b","familias":["barra_chata"],"origem":"exemplo","positivo":"4 barra chata 1 x 1/8","negativo":"4 barras de 3/8"},
+    {"id":"g_prego","termo":"\\bpregos?\\b","familias":["prego"],"origem":"exemplo","positivo":"5 kg de prego 17x21","negativo":"parafuso de telha"},
+    {"id":"g_arame","termo":"\\barr?ames?\\b(?!.*\\bfarpados?\\b)","familias":["arame"],"origem":"exemplo","positivo":"10 kg de arame 18","negativo":"rolo de arame farpado"},
+    {"id":"g_arame_farpado","termo":"\\bfarpados?\\b|\\brolos? (?:de )?(?:arr?ames? )?(?:250|500) ?(?:m|mt|metros)?\\b","familias":["arame_farpado"],"corrige_familia":true,"origem":"exemplo","positivo":"2 rolos de 250","negativo":"10 kg de arame 18"},
+    {"id":"g_parafuso_telha","termo":"\\bparafusos?\\b|\\bauto ?brocantes?\\b","familias":["parafuso_auto_brocante"],"origem":"exemplo","positivo":"1 caixa de parafuso de telha","negativo":"5 kg de prego"},
+    {"id":"g_telha","termo":"\\btelhas?\\b","familias":["telha_metalica"],"origem":"exemplo","positivo":"8 telhas de 6 metros","negativo":"calha de 30"},
+    {"id":"g_calha","termo":"\\bcalhas?\\b","familias":["calha"],"origem":"exemplo","positivo":"2 calha de 30","negativo":"8 telhas"},
+    {"id":"g_disco","termo":"\\bdiscos?\\b","familias":["disco"],"origem":"exemplo","positivo":"3 disco de corte 4 1/2","negativo":"lixa"},
+    {"id":"g_tinta","termo":"\\btintas?\\b|\\bzarcao\\b|\\besmalte\\b","familias":["tinta"],"origem":"exemplo","positivo":"1 galao de zarcao","negativo":"metalon"},
+    {"id":"g_fora_do_ramo","termo":"\\bareia\\b|\\bbrita\\b|\\btijolos?\\b|\\bcimento\\b|\\bmadeira\\b","familias":["fora_do_ramo"],"origem":"exemplo","positivo":"2 m de areia","negativo":"2 calha de 30"}
+  ],
+  "qualificadores": [
+    {"id":"q_galvanizado","familia":"arame","termo":"\\bgalv(?:anizado)?\\b|\\bzincado\\b","atributo":"galvanizado","valor":"galvanizado","origem":"exemplo","positivo":"zincado","negativo":"recozido"},
+    {"id":"q_telha_ondulada","familia":"telha_metalica","termo":"\\bondulad[ao]s?\\b|\\bonda\\b","atributo":"perfil","valor":"ondulada","origem":"exemplo","positivo":"ondulada","negativo":"trapezoidal"},
+    {"id":"q_disco_inox","familia":"disco","termo":"\\binox\\b|\\bfino\\b","atributo":"tipo","valor":"corte","origem":"exemplo","positivo":"inox","negativo":"desbaste"}
+  ],
+  "ignorar": [
+    {"id":"i_geral","familia":"*","termo":"^(?:comum|padrao|normal|nacional|novo|nova|de ferro|ferro|aco|metal|inteir[ao]|peca|pecas|barra|barras|unid|un|unidade|unidades|kg|quilo|quilos|rolo|rolos|cx|caixa|caixas|m|mt|mts|metros?)$","origem":"palavras que não distinguem produto","positivo":"comum","negativo":"galvanizado"},
+    {"id":"i_arame_liso","familia":"arame","termo":"^(?:liso|recozido)$","origem":"exemplo","positivo":"liso","negativo":"galvanizado"}
+  ]
+}

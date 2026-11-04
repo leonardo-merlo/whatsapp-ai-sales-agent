@@ -55,7 +55,7 @@ export default function Privacidade() {
           <h2>1. Quem é o controlador dos dados</h2>
           <p>
             O Wappia é operado por <strong>Leonardo Marinho Alves Merlo ME</strong>, inscrita no CNPJ sob o
-            nº 30.814.165/0001-68 ("Wappia", "nós"). Para questões de privacidade, entre em contato pelo
+            nº 30.814.165/0001-68 (&quot;Wappia&quot;, &quot;nós&quot;). Para questões de privacidade, entre em contato pelo
             e-mail <a href="mailto:leomamerlo@gmail.com">leomamerlo@gmail.com</a>.
           </p>
 

@@ -1,0 +1,15 @@
+{
+  "versao": "exemplo-2026-11-04.1",
+  "nota": "Fictional conversion tables for the demo company. The inch-to-mm rebar table and the sheet gauge table are public industry standards.",
+  "tabelas": [
+    {"id":"bitola_comercial","tipo":"pol_para_mm","familias":["vergalhao"],"pares":[["1/4","6.3"],["5/16","8"],["3/8","10"],["1/2","12.5"],["5/8","16"]],"origem":"tabela comercial de vergalhão","data":"2026-11-04","status":"ativa","a_validar_vendedor":false,"texto_original":"Polegada comercial → milímetro (3/8 = 10 mm).","exemplo_positivo":"vergalhao bitola 3/8 → 10","exemplo_negativo":"barra chata 3/8 continua em polegada","negativo_criado_pela_v2":true},
+    {"id":"mm_para_chapa","tipo":"mm_para_chapa","familias":["*"],"pares":[["0.45","26"],["0.6","24"],["0.75","22"],["0.9","20"],["1.2","18"],["1.5","16"],["2","14"]],"origem":"tabela de bitola de chapa","data":"2026-11-04","status":"ativa","a_validar_vendedor":false,"texto_original":"metalon com a espessura em milímetro: 0,90 mm é a chapa 20","exemplo_positivo":"metalon chapa 0,90mm → 20","exemplo_negativo":"metalon chapa 1,6mm não converte","negativo_criado_pela_v2":true},
+    {"id":"mm_para_pol_disco","tipo":"mm_para_pol","familias":["disco"],"pares":[["115","4.5"],["180","7"]],"origem":"diâmetro de disco em milímetro","data":"2026-11-04","status":"ativa","a_validar_vendedor":false,"texto_original":"disco de 115 mm é o de 4 1/2\"","exemplo_positivo":"disco 115mm → 4.5","exemplo_negativo":"disco 100mm não converte","negativo_criado_pela_v2":true}
+  ],
+  "especiais": [
+    {"id":"vara_3_16_e_ca60_5","familia":"vergalhao","etiqueta":"bitola","de":"3/16","de_forma":"fracao","para":"5","origem":"exemplo de regra de balcão","data":"2026-11-04","status":"ativa","a_validar_vendedor":false,"texto_original":"vara 3/16 é o CA60 5.0 mm","exemplo_positivo":"vergalhao bitola 3/16 → 5","exemplo_negativo":"barra chata espessura 3/16 continua 0.1875","negativo_criado_pela_v2":true}
+  ],
+  "gerais": [
+    {"id":"numero_grande_em_polegada_e_mm","regra":"numa medida em polegada, número solto de 25 para cima é milímetro","origem":"regra geral","data":"2026-11-04","status":"ativa","a_validar_vendedor":false,"exemplo_positivo":"disco 115 → 115 mm → 4.5","exemplo_negativo":"disco 7 continua 7 pol","negativo_criado_pela_v2":true}
+  ]
+}

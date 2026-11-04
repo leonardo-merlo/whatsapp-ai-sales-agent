@@ -1,0 +1,63 @@
+{
+ "regioes": [
+  {
+   "regiao_id": "001",
+   "nome": "CENTRO",
+   "cidades": [
+    {
+     "cidade": "JUNDIAÍ",
+     "uf": "SP"
+    },
+    {
+     "cidade": "ITATIBA",
+     "uf": "SP"
+    },
+    {
+     "cidade": "LOUVEIRA",
+     "uf": "SP"
+    },
+    {
+     "cidade": "VINHEDO",
+     "uf": "SP"
+    }
+   ]
+  },
+  {
+   "regiao_id": "002",
+   "nome": "NORTE",
+   "cidades": [
+    {
+     "cidade": "ITUPEVA",
+     "uf": "SP"
+    },
+    {
+     "cidade": "CABREÃVA",
+     "uf": "SP"
+    },
+    {
+     "cidade": "JARINU",
+     "uf": "SP"
+    }
+   ]
+  },
+  {
+   "regiao_id": "003",
+   "nome": "SERRA",
+   "cidades": [
+    {
+     "cidade": "ATIBAIA",
+     "uf": "SP"
+    },
+    {
+     "cidade": "BRAGANÇA PAULISTA",
+     "uf": "SP"
+    },
+    {
+     "cidade": "NAZARÉ PAULISTA",
+     "uf": "SP"
+    }
+   ]
+  }
+ ],
+ "sincronizado_em": "2026-09-30T15:43:28-03:00"
+}

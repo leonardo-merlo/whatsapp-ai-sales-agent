@@ -81,21 +81,17 @@ describe('sync de produtos', () => {
     produto_id, descricao, grupo, unidade_venda: 'PC', peso_kg: 1, ...extra,
   });
 
-  test('avisa os 4 produtos reais que o molde não lê', () => {
+  test('avisa os produtos que o molde não lê', () => {
     const avisos = avisosDaResposta(EXEMPLO, 'sync_produtos', { produtos: [
-      produto('700456', 'OVALADO RL1000 Z700', 'ARAMES LISOS E CORDOALHAS'),
-      produto('702136', 'TUBO ACO PRETO LEVE NBR5580 COM ROSCA 2 1/2 X 3,35MM', 'TUBO REDONDO GALV ALTA PRESSAO'),
-      produto('702213', 'OVALADO RL1000 GERDAU', 'ARAMES LISOS E CORDOALHAS'),
-      produto('702228', 'OVALADO RL1000 GERDAU  16X14 (700)', 'ARAMES LISOS E CORDOALHAS'),
+      produto('100499', 'ARAME OVALADO RL1000', 'ARAMES'),
+      produto('100198', 'TUBO METALON ESPECIAL SOB MEDIDA', 'TUBO METALON CH. 18'),
     ] });
-    assert.deepEqual(tipos(avisos), [
-      'produto_sem_medida 700456', 'produto_sem_medida 702136', 'produto_sem_medida 702213', 'produto_sem_medida 702228',
-    ]);
+    assert.deepEqual(tipos(avisos), ['produto_sem_medida 100499', 'produto_sem_medida 100198']);
   });
 
   test('produto que o molde lê não tem aviso', () => {
     const avisos = avisosDaResposta(EXEMPLO, 'sync_produtos', { produtos: [
-      produto('701000', 'VERGALHAO CA50 3/8 (10.0 MM)', 'VERGALHOES CA50'),
+      produto('100003', 'VERGALHAO CA50 3/8 (10.0 MM)', 'ACO CA50'),
     ] });
     assert.deepEqual(avisos.filter(a => a.tipo === 'produto_sem_medida'), []);
   });

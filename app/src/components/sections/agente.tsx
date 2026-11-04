@@ -429,6 +429,7 @@ export default function AgenteSection() {
   const draftSig = JSON.stringify({ ...montarPayload(), ativo: false });
   const baselineRef = useRef<string | null>(null);
   if (baselineRef.current === null) baselineRef.current = draftSig;
+  // eslint-disable-next-line react-hooks/refs -- the baseline is captured once, on the first render
   const rascunhoSujo = baselineRef.current !== draftSig;
 
   // Rascunho vive só em memória — avisa antes de fechar/recarregar a página.

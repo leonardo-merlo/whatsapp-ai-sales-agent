@@ -1,0 +1,8 @@
+{
+  "versao": "exemplo-2026-11-04.1",
+  "nota": "Fictional defaults of the demo company: when the customer does not say, which product the salesperson would pick.",
+  "padroes": [
+    {"id":"arame_farpado_250_sem_marca","status":"ativa","a_validar_vendedor":false,"escopo":{"familia":"arame_farpado","valores":["250"],"atributos_ausentes":["marca"]},"resultado":{"atributos":{"marca":"touro"}},"origem":"exemplo","data":"2026-11-04","texto_original":"farpado de 250 sem marca: é o Touro","exemplo_positivo":"rolo de farpado 250 → 100501","exemplo_negativo":"farpado 250 campeiro → 100503","negativo_criado_pela_v2":true,"positivo":{"familia":"arame_farpado","medidas":[["comprimento","250"]],"espera":{"codigo":"100501"}},"negativo":{"familia":"arame_farpado","medidas":[["comprimento","250"]],"qualificadores":["campeiro"],"espera":{"codigo":"100503"}}},
+    {"id":"disco_sem_tipo_e_corte","status":"ativa","a_validar_vendedor":false,"escopo":{"familia":"disco","atributos_ausentes":["tipo"]},"resultado":{"atributos":{"tipo":"corte"}},"origem":"exemplo","data":"2026-11-04","texto_original":"disco sem dizer o tipo: é o de corte","exemplo_positivo":"disco 4 1/2 → 100901","exemplo_negativo":"disco de desbaste 4 1/2 → 100902","negativo_criado_pela_v2":true,"positivo":{"familia":"disco","medidas":[["diametro","4 1/2"]],"espera":{"codigo":"100901"}},"negativo":{"familia":"disco","medidas":[["diametro","4 1/2"]],"qualificadores":["desbaste"],"espera":{"codigo":"100902"}}}
+  ]
+}
