@@ -34,6 +34,18 @@ export interface OpcoesBanco {
   unicosParciais?: Record<string, string[][]>;
 }
 
+/**
+ * A hora de uma gravação, nunca repetida. O Postgres grava em microssegundos e
+ * duas mensagens seguidas nunca empatam; o `Date` só tem milissegundos, e numa
+ * máquina rápida (o CI) duas gravações caíam no mesmo milissegundo. Com o
+ * empate, a ordem por `created_at` virava sorteio e testes falhavam às vezes.
+ */
+let ultimaHora = 0;
+function agora(): string {
+  ultimaHora = Math.max(Date.now(), ultimaHora + 1);
+  return new Date(ultimaHora).toISOString();
+}
+
 type Filtro = (linha: Linha) => boolean;
 
 interface Resultado<T> {
@@ -302,10 +314,10 @@ class Consulta<T = unknown> implements PromiseLike<Resultado<T>> {
     for (const nova of linhas) {
       const existente = chave ? this.linhasDaTabela().find(l => chave.every(c => l[c] === nova[c])) : undefined;
       if (existente) {
-        Object.assign(existente, nova, { updated_at: new Date().toISOString() });
+        Object.assign(existente, nova, { updated_at: agora() });
         saida.push(existente);
       } else {
-        const criada = { id: randomUUID(), created_at: new Date().toISOString(), updated_at: new Date().toISOString(), ...nova };
+        const criada = { id: randomUUID(), created_at: agora(), updated_at: agora(), ...nova };
         this.conferirUnicos(criada);
         this.linhasDaTabela().push(criada);
         saida.push(criada);
@@ -317,8 +329,8 @@ class Consulta<T = unknown> implements PromiseLike<Resultado<T>> {
   private executarInsert(): Resultado<T> {
     const novas = (Array.isArray(this.payload) ? this.payload : [this.payload as Linha]).map(linha => ({
       id: randomUUID(),
-      created_at: new Date().toISOString(),
-      updated_at: new Date().toISOString(),
+      created_at: agora(),
+      updated_at: agora(),
       ...linha,
     }));
     for (const nova of novas) {
@@ -331,7 +343,7 @@ class Consulta<T = unknown> implements PromiseLike<Resultado<T>> {
 
   private executarUpdate(): Resultado<T> {
     const alvos = this.linhasDaTabela().filter(linha => this.filtros.every(f => f(linha)));
-    for (const linha of alvos) Object.assign(linha, this.payload, { updated_at: new Date().toISOString() });
+    for (const linha of alvos) Object.assign(linha, this.payload, { updated_at: agora() });
     const dados = this.umSo ? (alvos[0] ?? null) : alvos;
     return { data: dados as T, error: null };
   }
