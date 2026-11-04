@@ -1,0 +1,25 @@
+# Claude Code local state (machine-specific, not shared)
+.claude/settings.local.json
+.claude/scheduled_tasks.lock
+# Copias de trabalho locais — podem conter copia de .env, nunca versionar
+.claude/worktrees/
+
+# Referencias de design (~31 MB, so consulta — o site nao usa nenhuma delas;
+# o print que a landing usa fica versionado em app/public/screens/)
+app/public/redesign-site/
+app/public/sana-ref/
+app/public/certu-refs/
+app/public/ux/
+
+# Saida de ferramenta local
+graphify-out/
+
+# Vercel (link do projeto, especifico da maquina)
+.vercel
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Metricas semanais (app/scripts/metricas.mjs): tem mensagem de cliente, fica fora do git
+metricas/

@@ -1,0 +1,195 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #ffffff;
+  --surface: #f7faf8;
+  --surface2: #f1f5f3;
+  --border: #e6ebe8;
+  --border2: #d8e2dc;
+  --text: #16211d;
+  --text2: #5c6a63;
+  --text3: #8c9a93;
+  --primary: #17a55a;
+  --primary-dark: #128049;
+  --primary-soft: #e9f7ef;
+  --primary-t: #128049;
+  --green-b: #e9f7ef;
+  --green-t: #128049;
+  --amber-b: #fff6e5;
+  --amber-t: #a86a11;
+  --red-b: #fdecec;
+  --red-t: #c8452f;
+  --blue-b: #eaf0fb;
+  --blue-t: #2c5fcb;
+  --gray-b: #f1f5f3;
+  --gray-t: #6f7c76;
+  --note-b: #fff6e5;
+  --chip: #f1f5f3;
+  --on-primary: #ffffff;
+  /* Borda dos badges — na referência todo badge é fundo tingido + borda tingida */
+  /* Compromisso na agenda: bloco sólido escuro com texto branco. Precisa ser um
+     par próprio porque ele é desenhado POR CIMA da faixa de disponibilidade, e
+     --primary-soft é idêntico a --green-b — um sumiria dentro do outro. */
+  --evt-b: #128049;
+  --evt-t: #ffffff;
+  --green-bb: #cfebdb;
+  --primary-bb: #cfebdb;
+  --produto-atendimento: #2563eb;
+  --produto-atendimento-soft: #eaf0fd;
+  --produto-vendas: #17a55a;
+  --produto-vendas-soft: #e9f7ef;
+  --amber-bb: #f6dfb4;
+  --red-bb: #f7d4cd;
+  --blue-bb: #d3e0f7;
+  --gray-bb: #e6ebe8;
+  --page-grad: linear-gradient(150deg, #bfe9d2 0%, #dcf3e6 28%, #eef8f2 60%, #f5faf7 100%);
+  --wa-bg: #efe9e1;
+  --wa-in: #ffffff;
+  --wa-out: #d9fdd3;
+  --wa-text: #111b21;
+  --wa-meta: #667781;
+
+  /* forma — a referência usa três raios só: card, controle e pílula */
+  --r-card: 12px;
+  --r-ctrl: 9px;
+  --r-pill: 99px;
+  --r-shell: 22px;
+  --sh-card: 0 1px 2px rgba(16, 40, 32, 0.04);
+  --sh-raised: 0 1px 2px rgba(16, 40, 32, 0.1);
+  --sh-pop: 0 24px 64px rgba(14, 52, 35, 0.16), 0 2px 6px rgba(14, 52, 35, 0.06);
+  --sh-primary: 0 4px 12px rgba(23, 165, 90, 0.24);
+
+  /* Respiro entre o painel flutuante e a borda da janela. No celular vale mais
+     área útil que enquadramento, então some — e a sidebar lê daqui para
+     posicionar seus popovers fixos. */
+  --shell-inset: 22px;
+}
+
+@media (max-width: 767px) {
+  :root { --shell-inset: 0px; }
+}
+
+.dark {
+  --bg: #0f1613;
+  --surface: #141c18;
+  --surface2: #1b241f;
+  --border: #253029;
+  --border2: #334037;
+  --text: #eaf2ee;
+  --text2: #a9b8b1;
+  --text3: #7b8a83;
+  --primary: #17a55a;
+  --primary-dark: #1bba66;
+  --primary-soft: #12291d;
+  --primary-t: #3dd68c;
+  --green-b: #12291d;
+  --green-t: #3dd68c;
+  --amber-b: #2e2211;
+  --amber-t: #e0a33b;
+  --red-b: #331714;
+  --red-t: #f08a72;
+  --blue-b: #16233a;
+  --blue-t: #8aaef0;
+  --gray-b: #1b241f;
+  --gray-t: #93a29b;
+  --note-b: #2e2a14;
+  --chip: #1b241f;
+  --on-primary: #ffffff;
+  --evt-b: #0f6b41;
+  --evt-t: #ffffff;
+  --green-bb: #1d4432;
+  --primary-bb: #1d4432;
+  --produto-atendimento: #7ea6f5;
+  --produto-atendimento-soft: #121d33;
+  --produto-vendas: #3dd68c;
+  --produto-vendas-soft: #12291d;
+  --amber-bb: #48381a;
+  --red-bb: #4a2620;
+  --blue-bb: #22355a;
+  --gray-bb: #253029;
+  --page-grad: linear-gradient(150deg, #103224 0%, #0d241b 28%, #0c1c17 60%, #0a1512 100%);
+  --wa-bg: #0b141a;
+  --wa-in: #202c33;
+  --wa-out: #005c4b;
+  --wa-text: #e9edef;
+  --wa-meta: #8696a0;
+
+  --sh-card: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --sh-raised: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --sh-pop: 0 24px 64px rgba(0, 0, 0, 0.5), 0 2px 6px rgba(0, 0, 0, 0.3);
+  --sh-primary: 0 4px 12px rgba(23, 165, 90, 0.3);
+}
+
+/* Wappia Atendimento (S14, invertido a pedido do Leonardo em 29/09): a mesma
+   tela, em azul; o Vendas fica com o verde de sempre. Só as variáveis da marca
+   mudam; verde de sucesso (--green-*) continua verde. O atributo fica no shell
+   do painel (app-chrome.tsx), então tudo que está dentro dele herda. A logo
+   azul é arquivo próprio (public/brand/wappia-azul.png), escolhido na sidebar. */
+[data-produto="atendimento"] {
+  --primary: #2563eb;
+  --primary-dark: #1d4fd8;
+  --primary-soft: #eaf0fd;
+  --primary-t: #1e4fc2;
+  --primary-bb: #cddcf9;
+  --evt-b: #1e4fc2;
+  --page-grad: linear-gradient(150deg, #c3d6f7 0%, #dde7fa 28%, #eef3fc 60%, #f5f8fd 100%);
+  --sh-primary: 0 4px 12px rgba(37, 99, 235, 0.24);
+  --sh-pop: 0 24px 64px rgba(14, 30, 70, 0.16), 0 2px 6px rgba(14, 30, 70, 0.06);
+}
+
+.dark [data-produto="atendimento"] {
+  --primary: #2f6fed;
+  --primary-dark: #4a83f0;
+  --primary-soft: #121d33;
+  --primary-t: #7ea6f5;
+  --primary-bb: #1f3358;
+  --evt-b: #1d4aa8;
+  --page-grad: linear-gradient(150deg, #10213f 0%, #0d1a31 28%, #0c1524 60%, #0a111c 100%);
+  --sh-primary: 0 4px 12px rgba(47, 111, 237, 0.3);
+  --sh-pop: 0 24px 64px rgba(0, 0, 0, 0.5), 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+html, body { margin: 0; padding: 0; height: 100%; }
+* { box-sizing: border-box; }
+body {
+  font-family: var(--font-sans), system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+input, select, textarea, button { font-family: inherit; }
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid var(--primary-soft);
+  border-color: var(--primary) !important;
+}
+
+/* Números em mono, como na referência: valor em R$, hora, contagem, métrica.
+   Tabular para os dígitos não dançarem entre linhas de uma tabela. */
+.mono {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+/* Título de seção: peso 800 com tracking negativo é a assinatura da referência. */
+.t-sec { font-weight: 800; letter-spacing: -0.3px; }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 8px; border: 3px solid transparent; background-clip: content-box; }
+::-webkit-scrollbar-track { background: transparent; }
+
+@keyframes cm-pop {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.anim-pop { animation: cm-pop 0.18s ease; }
+.hs:hover { background: var(--surface2) !important; }
+.hp:hover { background: var(--primary-dark) !important; }
+.hr:hover { color: var(--red-t) !important; }
+
+/* Simulador em celular: pontinhos de "digitando" */
+@keyframes wa-typing {
+  0%, 60%, 100% { opacity: 0.25; transform: translateY(0); }
+  30% { opacity: 1; transform: translateY(-2px); }
+}
+.wa-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--wa-meta); animation: wa-typing 1.2s infinite ease-in-out; }
+.wa-dot:nth-child(2) { animation-delay: 0.2s; }
+.wa-dot:nth-child(3) { animation-delay: 0.4s; }

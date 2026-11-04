@@ -1,0 +1,2 @@
+REVOKE EXECUTE ON FUNCTION public.is_member_of(uuid) FROM PUBLIC;
+REVOKE EXECUTE ON FUNCTION public.is_admin_of(uuid) FROM PUBLIC;
