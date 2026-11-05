@@ -4,9 +4,6 @@
 
 An AI assistant that works inside a salesperson's WhatsApp: it identifies the customer, turns free-text, photo and audio orders into catalog items, checks delivery and payment, and prepares the quote in the company's ERP. In production at a B2B steel distributor in Brazil.
 
-<!-- GIF: 20-second clip of a customer order turning into a confirmed item list. -->
-> Demo GIF: _coming soon_ · Video walkthrough (2-3 min): _link coming soon_
-
 > **About this repository.** Developed over 4 months (July to November 2026) in a private production repository (480+ commits). This is a sanitized snapshot: client data and client-specific business rules were replaced with fictional ones (a made-up company, **Distribuidora Exemplo**). Code and comments are in Portuguese; see the [glossary](#glossary-pt--en).
 
 ## The problem
